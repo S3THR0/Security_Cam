@@ -1,5 +1,10 @@
 import cv2
 #import winsound
+import pyfiglet
+
+#Text in alligator font
+out = pyfiglet.figlet_format("S3THR0", font="alligator")
+print(out)
 
 # Read Computer Vison
 cam = cv2.VideoCapture(0)
