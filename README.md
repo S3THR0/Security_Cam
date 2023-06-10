@@ -1,30 +1,47 @@
 # LOGIN/REGISTER
 
-STEP 0 : OPEN COMMAND LINE/ BE IN ACTIVE DIRECTORY
+## Setup Instructions
 
-STEP 1 : RUN "pip install -r requirements.txt"
+1. Open the command line and navigate to the active directory.
 
-STEP 2 : RUN "python3 securitycam.py"
+2. Run the following command to install the required dependencies:
+```
+pip install -r requirements.txt
+```
 
-STEP 3 : TYPE "q" TO QUIT
+3. Run the security camera application by executing the following command:
+```
+python3 securitycam.py
+```
 
-STEP 4 : IF ON WINDOWS OPERATION SYSTEM & YOU WANT SOUN ALERT. OPEN "securitycam.py"
-in a text editor, remove the # in line 2, & 21.
+4. To quit the application, simply type "q" in the command line.
 
-# Notes
+## Windows Operating System Sound Alert (Optional)
 
-In order to change camera source, via file, link or plug in,
-look for line 5.
+If you are using a Windows operating system and wish to enable sound alerts, follow these steps:
 
+1. Open the "securitycam.py" file in a text editor.
+
+2. Remove the "#" character from lines 2 and 21.
+
+## Changing Camera Source
+
+To change the camera source, whether from a file, link, or plugged-in device, follow these instructions:
+
+1. Locate line 5 in the "securitycam.py" file:
+```
 cam = cv2.VideoCapture(0)
+```
 
-replace the (0) with a different source such as file path
-cam = cv2.VideoCapture("Videos/vid1.mp4)
+2. Replace the "0" parameter with the desired source, such as:
+   - For a file path: `cam = cv2.VideoCapture("Videos/vid1.mp4")`
+   - For a plugged-in device: `cam = cv2.VideoCapture(1)`
+   - For a web URL with port: `cam = cv2.VideoCapture("websitelink:port")`
 
-or a different number a plugged in media
-cam = cv2.VideoCapture(1)
+## Important Note
 
-cam = cv2.VideoCapture("websitelink:port")
+Please be aware that this project is a personal learning endeavor and is not suitable for production use as it lacks security measures. You are encouraged to use this codebase alongside your own to enhance its functionality.
 
-there are many plans for the future, im aware this is not secure for production. this is my learn as i go project.
-You may use this ontop of your own code.
+Feel free to incorporate this into your existing codebase and make necessary modifications.
+
+If you have any questions or run into any issues, feel free to reach out to me.
